@@ -1,11 +1,35 @@
 {
   "packageDirectories": [
     {
-      "path": "force-app",
-      "default": true
+      "path": "services",
+      "default": true,
+      "package": "AlmServices",
+      "versionName": "ver 0.1",
+      "versionNumber": "0.1.0.NEXT"
+    },
+    {
+      "path": "ui",
+      "default": false,
+      "package": "AlmUi",
+      "versionName": "ver 0.2",
+      "versionNumber": "0.2.1.NEXT",
+      "dependencies": [
+        {
+          "package": "AlmServices",
+          "versionNumber": "0.1.0.LATEST"
+        }
+      ]
     }
   ],
-  "namespace": "",
+  "namespace": "alm007",
   "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "50.0"
+  "sourceApiVersion": "50.0",
+  "packageAliases": {
+    "AlmUi": "0Ho2w000000kA0OCAU",
+    "AlmServices": "0Ho2w000000kA0TCAU",
+    "AlmServices@0.1.0-1": "04t2w000009F61DAAS",
+    "AlmUi@0.2.1-1": "04t2w000009F61IAAS",
+    "AlmServices@0.1.0-2": "04t2w000009F61hAAC",
+    "AlmServices@0.1.0-3": "04t2w000009F61mAAC"
+  }
 }
